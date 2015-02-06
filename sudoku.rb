@@ -33,8 +33,14 @@ class Sudoku
   def solve
     (0..8).each do |y|
       (0..8).each do |x|
-        if @board[y][x].usable?
-          
+        cell = @board[y][x]
+        if cell.usable?
+          [:column, :row, :square].each do |iter|
+            send(iter, y, x) do |y, x|
+              @board[y][x].mark(cell.num)
+            end
+          end
+          cell.used = true
         end
       end
     end
