@@ -46,6 +46,10 @@ class Cell
     @used = false
   end
 
+  def usable?
+    !@used && @num
+  end
+
   def to_s
     @num ? @num.to_s : '-'
   end
