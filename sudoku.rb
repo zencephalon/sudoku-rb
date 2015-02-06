@@ -22,7 +22,7 @@ class Sudoku
   end
 
   def square(y, x)
-    yc, xc = y / 3, x / 3
+    yc, xc = (y / 3) * 3, (x / 3) * 3
     (yc..(yc + 2)).each do |y|
       (xc..(xc + 2)).each do |x|
         yield y, x
