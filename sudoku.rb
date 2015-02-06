@@ -9,4 +9,8 @@ class Cell
     @num = num == 0 ? nil : num
     @open = @num ? [] : (1..9).to_a
   end
+
+  def to_s
+    @num ? @num.to_s : '-'
+  end
 end
