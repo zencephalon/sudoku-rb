@@ -25,6 +25,7 @@ class Cell
   def initialize(num)
     @num = num == 0 ? nil : num
     @open = @num ? [] : (1..9).to_a
+    @used = false
   end
 
   def to_s
