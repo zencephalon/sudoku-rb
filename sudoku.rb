@@ -1,4 +1,6 @@
 class Sudoku
+  attr_accessor :board
+
   def initialize(board_str)
     @board = board_str.split('').each_slice(9).map {|row| row.map {|c| Cell.new(c.to_i)} }
   end
