@@ -6,6 +6,16 @@ class Sudoku
   def to_s
     @board.map {|row| row.map(&:to_s).join(" ")}.join("\n")
   end
+
+  def column(y, x)
+
+  end
+
+  def row(y, x)
+  end
+
+  def square(y, x)
+  end
 end
 
 class Cell
