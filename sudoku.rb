@@ -12,6 +12,9 @@ class Sudoku
   end
 
   def row(y, x)
+    (0..8).map {|x| [y, x]}.each do |y, x|
+      yield y, x
+    end
   end
 
   def square(y, x)
