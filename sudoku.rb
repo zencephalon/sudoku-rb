@@ -1,6 +1,6 @@
 class Sudoku
   def initialize(board_str)
-    board_str.split.
+    @board = board_str.split('').each_slice(9).map {|row| row.map {|c| Cell.new(c.to_i)} }
   end
 end
 
