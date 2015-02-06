@@ -27,6 +27,16 @@ class Sudoku
       end
     end
   end
+
+  def solve
+    (0..8).each do |y|
+      (0..8).each do |x|
+        if @board[y][x].usable?
+          
+        end
+      end
+    end
+  end
 end
 
 class Cell
