@@ -20,6 +20,12 @@ class Sudoku
   end
 
   def square(y, x)
+    yc, xc = y / 3, x / 3
+    (yc..(yc + 2)).each do |y|
+      (xc..(xc + 2)).each do |x|
+        yield y, x
+      end
+    end
   end
 end
 
