@@ -8,7 +8,9 @@ class Sudoku
   end
 
   def column(y, x)
-
+    (0..8).map {|y| [y, x]}.each do |y, x|
+      yield y, x
+    end
   end
 
   def row(y, x)
