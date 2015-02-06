@@ -42,10 +42,18 @@ class Sudoku
 end
 
 class Cell
+  attr_reader :num
+  attr_accessor :used
+
   def initialize(num)
     @num = num == 0 ? nil : num
     @open = @num ? [] : (1..9).to_a
     @used = false
+  end
+
+  def mark(n)
+    @open.delete(n)
+    @num = @open.pop if @open.size == 1
   end
 
   def usable?
